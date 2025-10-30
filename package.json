@@ -1,0 +1,33 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react project",
+  "keywords": [
+    "react",
+    "namste-react"
+  ],
+  "homepage": "https://github.com/DURGAPRASAD261/namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/DURGAPRASAD261/namaste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DURGAPRASAD261/namaste-react.git"
+  },
+  "license": "ISC",
+  "author": "Durga prasad",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel serve index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "6.26.1",
+    "react-router-dom": "6.26.1"
+  }
+}

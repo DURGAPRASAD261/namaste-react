@@ -1,0 +1,91 @@
+.rest-card {
+  position: relative;
+  width: 250px;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rest-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.res-logo {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Favorite button */
+.fav-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+  transition: background 0.3s ease;
+}
+
+.fav-btn:hover {
+  /* background: #FFD54F; */
+  background: #50C878;
+  /* background: #FF0000; */
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.card-desc {
+  color: #757575;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.star-rating-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  color: green;
+  margin-right: 5px;
+}
+.rating{
+    margin-right: 30px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+.price-text{
+    font-weight: 500;
+}
+
+.view-menu-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #FFD54F;
+  color: #212121;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.view-menu-btn:hover {
+  background-color: #FF7043;
+  color: #fff;
+}
+

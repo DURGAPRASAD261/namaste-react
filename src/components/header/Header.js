@@ -1,5 +1,7 @@
 import { LOGO_URL } from "../../utils/constants";
 import './header.css';
+import { Link } from "react-router-dom";
+import {NAV_ITEM_LIST} from '../../utils/constants';
 
 const Header = () => {
 
@@ -13,10 +15,13 @@ const Header = () => {
     </div> */}
     <nav className="nav-items">
       <ul>
-        <li>Home</li>
+        {NAV_ITEM_LIST?.map((item, index) => (
+          <li key={item?.id || index}><Link to={item?.navTo}>{item?.title}</Link></li>
+        ))}
+        {/* <li><Link to='/'>Home</Link></li>
         <li>About</li>
         <li>Contact</li>
-        <li><span className="cart-icon">🛒</span> Cart</li>
+        <li>Cart</li> */}
         <button className="login">Login</button>
       </ul>
     </nav>

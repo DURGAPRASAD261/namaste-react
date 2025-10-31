@@ -6,31 +6,41 @@ import Body from "./components/body/Body";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import ErrorPage from "./components/errorPage/ErrorPage";
-import './index.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
 
 const appRouter = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <AppLayout />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/body",
+        element: <Body />,
+      },
+    ],
     errorElement: <ErrorPage />,
-  },
-  {
-    path: '/about',
-    element: <About />,
-  },
-    {
-    path: '/contact',
-    element: <Contact />,
   },
 ]);
 

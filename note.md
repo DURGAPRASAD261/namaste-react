@@ -111,4 +111,8 @@
 -> Never creates useStates out side of the component, inside local functions, inside if/else conditions, inside loops --> creates inconsistent returns.
 -> 
 
-# createBrowserRouter, RouterProvider
+# createBrowserRouter, RouterProvider, Link
+
+# 2 Types of Routing in web apps
+-> Client side Routing and Server side Routing.
+->

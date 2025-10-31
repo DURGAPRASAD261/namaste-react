@@ -20,3 +20,26 @@ export const FILTERS_BUTTON_LIST = [
         isActive: false,
     }
 ];
+
+export const NAV_ITEM_LIST = [
+     {
+        id: 1,
+        title: 'Home',
+        navTo: '/',
+    },  
+    {
+        id: 2,
+        title: 'About',
+        navTo: '/about',
+    },
+    {
+        id: 3,
+        title: 'Contact',
+        navTo: '/contact',
+    },
+    {
+        id: 4,
+        title: 'Cart',
+        isActive: '/',
+    }
+];

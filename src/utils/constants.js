@@ -3,6 +3,11 @@ export const FOOD_IMG = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_
 export const RATING_STAR_ICON = '✪';
 export const FAV_ICON = '♡';
 
+export const apiURLs = {
+   getRestaurants: 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3982633&lng=78.481105&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING',
+   getRestaurantMenu: 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.3982633&lng=78.481105&restaurantId=674540',
+}
+
 export const FILTERS_BUTTON_LIST = [
     {
         id: 1,

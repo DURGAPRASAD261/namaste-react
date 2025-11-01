@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { RATING_STAR_ICON, FAV_ICON } from '../../utils/constants';
 import './restaurantCard.css';
 
@@ -29,7 +30,7 @@ const RestaurantCard = ({ data }) => {
         </div>
 
         {/* View Menu Button */}
-        <button className="view-menu-btn">View Menu</button>
+        <button className="view-menu-btn"><Link to='/restaurant/:id'>View Menu</Link></button>
       </div>
     </div>
   );

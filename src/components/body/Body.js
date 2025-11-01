@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "../restaurantCard/RestaurantCard";
 import ShimmerCard from "../shimmerCard/ShimmerCard";
-import { FILTERS_BUTTON_LIST } from "../../utils/constants";
+import { FILTERS_BUTTON_LIST, apiURLs } from "../../utils/constants";
 import "./body.css";
 
 const Body = () => {
@@ -11,15 +11,13 @@ const Body = () => {
     useState(FILTERS_BUTTON_LIST);
   const [searchText, setSearchText] = useState("");
 
-  const swiggyRestaurantApi =
-    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3982633&lng=78.481105&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
   useEffect(() => {
     fetchRestaurants();
   }, []);
 
   const fetchRestaurants = async () => {
-    const response = await fetch(swiggyRestaurantApi);
+    const response = await fetch(apiURLs?.getRestaurants);
     const restData = await response?.json();
     setRestaurantsList(
       restData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle

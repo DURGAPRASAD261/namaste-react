@@ -16,7 +16,7 @@ const Header = () => {
         <ul>
           {NAV_ITEM_LIST?.map((item, index) => (
             <li key={item?.id || index}>
-              <Link to={item?.navTo}>{item?.title}</Link>
+              <Link to={item?.navTo} className="link-style">{item?.title}</Link>
             </li>
           ))}
           {/* <button className="login">Login</button> */}

@@ -88,4 +88,7 @@
   background-color: #FF7043;
   color: #fff;
 }
-
+.link-style{
+  text-decoration: none;
+  color: inherit;
+}

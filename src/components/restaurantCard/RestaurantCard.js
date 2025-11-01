@@ -30,7 +30,7 @@ const RestaurantCard = ({ data }) => {
         </div>
 
         {/* View Menu Button */}
-        <button className="view-menu-btn"><Link to='/restaurant/:id'>View Menu</Link></button>
+        <button className="view-menu-btn"><Link to='/restaurant/:id' className='link-style'>View Menu</Link></button>
       </div>
     </div>
   );

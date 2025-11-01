@@ -2,6 +2,7 @@ export const LOGO_URL = 'https://cdn.pixabay.com/photo/2016/05/16/20/26/burger-1
 export const FOOD_IMG = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/481fc42f9821e18b124c235b3d1a073d';
 export const RATING_STAR_ICON = '✪';
 export const FAV_ICON = '♡';
+export const RESTAURANT_IMG = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const apiURLs = {
    getRestaurants: 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3982633&lng=78.481105&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING',

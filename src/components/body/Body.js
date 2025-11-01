@@ -20,8 +20,8 @@ const Body = () => {
     const response = await fetch(apiURLs?.getRestaurants);
     const restData = await response?.json();
     setRestaurantsList(
-      restData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
+      // restData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      restData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 

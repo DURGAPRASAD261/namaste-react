@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
-import { RATING_STAR_ICON, FAV_ICON } from '../../utils/constants';
+import { RATING_STAR_ICON, FAV_ICON, RESTAURANT_IMG } from '../../utils/constants';
 import './restaurantCard.css';
 
 const RestaurantCard = ({ data }) => {
-  const {info} = data;
+  const {cloudinaryImageId, name, cuisines, avgRatingString, costForTwo } = data?.info;
   return (
     <div className="rest-card">
       {/* Restaurant Image */}
       <img
         className="res-logo"
         alt="res-logo"
-        src={info?.cloudinaryImageId}
+        src={RESTAURANT_IMG+cloudinaryImageId}
       />
 
       {/* Favorite Icon */}
@@ -18,15 +18,15 @@ const RestaurantCard = ({ data }) => {
 
       {/* Card Details */}
       <div className="card-body">
-        <p className="card-title">{info?.name}</p>
-        <p className="card-desc">{info?.cuisines?.join(', ')}</p>
+        <p className="card-title">{name}</p>
+        <p className="card-desc">{cuisines?.join(', ')}</p>
 
         <div className="star-rating-view">
           <span className="rating">
             <span className="star-icon">{RATING_STAR_ICON}</span>
-            {info?.avgRatingString}
+            {avgRatingString}
           </span>
-          <span className="price-text">{info?.costForTwo}</span>
+          <span className="price-text">{costForTwo}</span>
         </div>
 
         {/* View Menu Button */}

@@ -21,7 +21,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <div style={{ paddingTop: `${headerHeight}px` }}>
+      <div style={{ paddingTop: `${headerHeight}px`, marginTop: 30, paddingBottom: '10%' }}>
         <Outlet />
       </div>
     </div>

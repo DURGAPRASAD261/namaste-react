@@ -8,6 +8,11 @@ export const apiURLs = {
    getRestaurantMenu: 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.3982633&lng=78.481105&restaurantId=674540',
 }
 
+export const menuPageConstants = {
+    menuTitle: '꧁ Menu ꧂',
+    addToCart: 'Add',
+};
+
 export const FILTERS_BUTTON_LIST = [
     {
         id: 1,

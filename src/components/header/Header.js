@@ -19,10 +19,6 @@ const Header = () => {
               <Link to={item?.navTo}>{item?.title}</Link>
             </li>
           ))}
-          {/* <li><Link to='/'>Home</Link></li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Cart</li> */}
           {/* <button className="login">Login</button> */}
         </ul>
       </nav>

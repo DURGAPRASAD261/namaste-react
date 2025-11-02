@@ -45,8 +45,10 @@
 }
 
 .nav-items > ul > li:hover {
-  color: #FF7043;
+  /* color: #FF7043; */
+  color: white;
   cursor: pointer;
+  font-weight: 900;
 }
 
 .cart-icon {

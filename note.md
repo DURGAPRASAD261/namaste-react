@@ -116,3 +116,10 @@
 # 2 Types of Routing in web apps
 -> Client side Routing and Server side Routing.
 ->
+
+# Class based components
+-> These are older method to write functions in react.
+
+# Read about: Code splitting, lazy loading,Dynamic bundling, chunking, on demand loading....(all are same)
+# Read about UI Frameworks: Material UI, SASS, Bootstarp, Chakra UI, Ant design, Tailwand CSS
+

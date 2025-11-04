@@ -123,3 +123,5 @@
 # Read about: Code splitting, lazy loading,Dynamic bundling, chunking, on demand loading....(all are same)
 # Read about UI Frameworks: Material UI, SASS, Bootstarp, Chakra UI, Ant design, Tailwand CSS
 
+# Higher Order Component
+-> This is a function, and it takes a component as a input, and it enhance the component and it returns the back.

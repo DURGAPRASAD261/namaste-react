@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "../restaurantCard/RestaurantCard";
+import RestaurantCard, {WithRibbonLabel} from "../restaurantCard/RestaurantCard";
 import ShimmerCard from "../shimmerCard/ShimmerCard";
 import { FILTERS_BUTTON_LIST, apiURLs } from "../../utils/constants";
 import "./body.css";
@@ -7,10 +7,10 @@ import "./body.css";
 const Body = () => {
   const [restaurantsList, setRestaurantsList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
-  const [filtersButtonList, setFiltersButtonList] =
-    useState(FILTERS_BUTTON_LIST);
+  const [filtersButtonList, setFiltersButtonList] = useState(FILTERS_BUTTON_LIST);
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPromoted = WithRibbonLabel(RestaurantCard);
 
   useEffect(() => {
     fetchRestaurants();
@@ -87,6 +87,7 @@ const Body = () => {
     );
     setFilteredList(filterData);
   };
+  
 
   return (
     <div className="body">
@@ -114,9 +115,12 @@ const Body = () => {
       {/* Restaurant Cards */}
       <div className="rest-container">
         {((filteredList?.length || searchText) ? filteredList : restaurantsList)?.map(
-          (item, index) => (
-            <RestaurantCard key={item?.data?.info?.id || index} data={item} />
-          )
+          (item, index) => {
+            return (
+              <RestaurantCardPromoted key={item?.info?.id || index} data={item} />
+              //  <RestaurantCard key={item?.info?.id || index} data={item} />
+            )
+          }
         )}
       </div>
 

@@ -92,3 +92,38 @@
   text-decoration: none;
   color: inherit;
 }
+.label-container {
+  position: relative;
+  display: inline-block;
+}
+
+.label-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #fff; 
+  padding: 5px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 0 10px #fff, 0 0 20px #000;
+  border-radius: 5px;
+
+  /* Glowing Animation */
+  animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #000;
+  }
+  50% {
+    box-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 30px #000;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #000;
+  }
+}
+

@@ -36,4 +36,22 @@ const RestaurantCard = ({ data }) => {
   );
 };
 
+export const WithRibbonLabel = (RestaurantCardComponent) => {
+  return (props) => {
+    const { aggregatedDiscountInfoV3 } = props?.data?.info;
+
+    let labelText = "";
+    if (aggregatedDiscountInfoV3?.header) {
+      labelText = aggregatedDiscountInfoV3.header + ' ' + aggregatedDiscountInfoV3.subHeader; // e.g., "40% OFF"
+    } 
+
+    return (
+      <div className="label-container">
+        {labelText && <span className="label-text">{labelText}</span>}
+        <RestaurantCardComponent {...props} />
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;
